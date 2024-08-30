@@ -1,0 +1,68 @@
+module Responses
+    RESPONSES = {
+      /error|bug|issue/ => "It sounds like you're encountering a problem. Have you tried checking the logs or using a debugger?",
+      /help|assist/ => "How can I assist you? Maybe try breaking down the problem into smaller parts.",
+      /solve|solution/ => "Great! It looks like you're close to a solution. What steps have you tried so far?",
+      /thank|thanks/ => "You're welcome! I'm always here to help. Keep up the great work!",
+      /exit/ => "Goodbye! I'm glad I could help.",
+      /debug/ => "Debugging can be tough, but it's essential. Have you tried narrowing down where the issue might be?",
+      /syntax/ => "Syntax errors are common. Double-check your code for missing or misplaced characters.",
+      /refactor/ => "Refactoring is a great way to improve code quality. Focus on simplifying complex methods and removing redundancy.",
+      /optimize/ => "Optimizing your code can lead to better performance. Consider profiling your code to find bottlenecks.",
+      /performance/ => "Performance issues can be tricky. Have you checked your algorithms and data structures for efficiency?",
+      /test|testing/ => "Testing is crucial. Make sure to write tests for edge cases and possible error conditions.",
+      /feature/ => "New features can be exciting! Make sure to plan and implement them incrementally.",
+      /design/ => "Good design is key to maintainable code. Consider using design patterns or principles like SOLID.",
+      /architecture/ => "Architectural decisions can shape your project. Consider modularity and scalability when making choices.",
+      /documentation/ => "Documentation helps others (and your future self) understand the code. Keep it clear and up-to-date.",
+      /deadline/ => "Deadlines can be stressful. Break down tasks into manageable chunks and prioritize effectively.",
+      /motivation/ => "Staying motivated is important. Take breaks when needed and celebrate small wins along the way.",
+      /bored|boredom/ => "Feeling bored? Maybe it's time to tackle a new challenge or learn something new.",
+      /challenge/ => "Challenges help us grow. Embrace them as opportunities to learn and improve.",
+      /learning/ => "Continuous learning is vital in tech. What new skills or knowledge are you working on?",
+      /career/ => "Career planning is important. Set clear goals and seek out opportunities that align with your aspirations.",
+      /team/ => "Teamwork makes the dream work! Communication and collaboration are key to success.",
+      /feedback/ => "Feedback helps us improve. Don't be afraid to ask for it or give it constructively.",
+      /communication/ => "Clear communication can prevent many issues. Make sure everyone is on the same page.",
+      /plan/ => "A solid plan is the foundation of success. Make sure to regularly review and adjust your plans as needed.",
+      /problem/ => "Every problem has a solution. Let's break it down and find a way forward.",
+      /code review/ => "Code reviews are a great way to improve code quality and share knowledge. Be thorough and constructive.",
+      /deployment/ => "Deployments can be nerve-wracking. Make sure to follow best practices and have a rollback plan.",
+      /production/ => "Production issues require swift action. Make sure to monitor closely and have contingencies in place.",
+      /database/ => "Databases are the backbone of many applications. Ensure your queries are efficient and your schema is well-designed.",
+      /api/ => "APIs enable communication between systems. Ensure they're well-documented and follow best practices.",
+      /ui|ux/ => "User Interface and User Experience are crucial for product success. Keep the user in mind at every step.",
+      /security/ => "Security should never be an afterthought. Regularly audit your code for potential vulnerabilities.",
+      /compliance/ => "Compliance with standards and regulations is vital. Make sure you're up to date with the latest requirements.",
+      /integration/ => "Integration can be challenging. Ensure thorough testing and clear communication between systems.",
+      /automation/ => "Automation can save time and reduce errors. Identify repetitive tasks that can be automated.",
+      /devops/ => "DevOps practices can streamline your workflow. Consider continuous integration and deployment for better efficiency.",
+      /version control/ => "Version control is essential. Ensure your commit messages are clear and your branches well-managed.",
+      /open source/ => "Open source contributions can be rewarding. Consider how your work can benefit the community.",
+      /community/ => "Being part of a community can be incredibly rewarding. Engage, contribute, and learn from others.",
+      /mentorship/ => "Mentorship is a two-way street. Both mentors and mentees can learn and grow from the experience.",
+      /innovation/ => "Innovation drives progress. Don't be afraid to experiment with new ideas and approaches.",
+      /strategy/ => "A well-defined strategy can guide your efforts. Make sure it aligns with your long-term goals.",
+      /legacy code/ => "Working with legacy code can be challenging. Focus on understanding and incrementally improving it.",
+      /dependencies/ => "Managing dependencies is crucial for stability. Ensure they're up to date and compatible.",
+      /ai|artificial intelligence/ => "AI is transforming the tech landscape. Consider how it can be leveraged in your projects.",
+      /ml|machine learning/ => "Machine Learning can open new possibilities. Ensure your models are trained on quality data.",
+      /data/ => "Data is a powerful asset. Make sure it's accurate, well-organized, and secure.",
+      /big data/ => "Big data can provide valuable insights. Consider using tools and techniques for efficient processing.",
+      /cloud/ => "Cloud computing offers scalability and flexibility. Make sure your architecture is optimized for the cloud.",
+      /microservices/ => "Microservices can enhance modularity and scalability. Ensure they communicate effectively and are well-monitored.",
+      /containers/ => "Containers can simplify deployment and scaling. Consider using Docker or Kubernetes for management.",
+      /blockchain/ => "Blockchain technology is revolutionizing industries. Consider its applications in your field.",
+      /privacy/ => "Privacy is a fundamental right. Ensure your application respects and protects user data.",
+      /ethics/ => "Ethics in technology are more important than ever. Consider the societal impact of your work.",
+      /sustainability/ => "Sustainability should be a priority. Consider the environmental impact of your technology.",
+      /.*/ => "Hmm, that sounds interesting. What else?"
+    }
+  
+    def self.generate_response(note)
+      RESPONSES.each do |pattern, response|
+        return response if note =~ pattern
+      end
+    end
+  end
+  
