@@ -1,14 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    colorize (0.8.1)
     minitest (5.25.1)
+    tty-cursor (0.7.1)
+    tty-screen (0.8.2)
 
 PLATFORMS
   ruby
   x86_64-darwin-22
 
 DEPENDENCIES
+  colorize (~> 0.8.1)
   minitest (~> 5.14)
+  tty-cursor (~> 0.7.1)
+  tty-screen (~> 0.8.1)
 
 RUBY VERSION
    ruby 3.2.1p31
