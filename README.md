@@ -4,6 +4,10 @@
 
 The Rubber Ducky CLI is a command-line application designed to help developers articulate and solve problems by explaining them to a virtual "Rubber Ducky." The application simulates the experience of verbalizing issues to an inanimate object as a method of problem-solving.
 
+## Setup
+
+- You need an OpenAI API key. Make it accessible in your application by running `export OPENAI_API_KEY=your-api-key` in your terminal
+
 ## Usage
 
 1. Clone the repository.
