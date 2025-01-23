@@ -2,17 +2,58 @@ GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.8.1)
-    minitest (5.25.1)
+    date (3.4.1)
+    debug (1.10.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
+    event_stream_parser (1.0.0)
+    faraday (2.12.2)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-multipart (1.1.0)
+      multipart-post (~> 2.0)
+    faraday-net_http (3.4.0)
+      net-http (>= 0.5.0)
+    io-console (0.8.0)
+    irb (1.15.1)
+      pp (>= 0.6.0)
+      rdoc (>= 4.0.0)
+      reline (>= 0.4.2)
+    json (2.9.1)
+    logger (1.6.5)
+    minitest (5.25.4)
+    multipart-post (2.4.1)
+    net-http (0.6.0)
+      uri
+    pp (0.6.2)
+      prettyprint
+    prettyprint (0.2.0)
+    psych (5.2.3)
+      date
+      stringio
+    rdoc (6.11.0)
+      psych (>= 4.0.0)
+    reline (0.6.0)
+      io-console (~> 0.5)
+    ruby-openai (7.3.1)
+      event_stream_parser (>= 0.3.0, < 2.0.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
+    stringio (3.1.2)
     tty-cursor (0.7.1)
     tty-screen (0.8.2)
+    uri (1.0.2)
 
 PLATFORMS
   ruby
-  x86_64-darwin-22
+  x86_64-darwin-23
 
 DEPENDENCIES
   colorize (~> 0.8.1)
+  debug
   minitest (~> 5.14)
+  ruby-openai
   tty-cursor (~> 0.7.1)
   tty-screen (~> 0.8.1)
 
@@ -20,4 +61,4 @@ RUBY VERSION
    ruby 3.2.1p31
 
 BUNDLED WITH
-   2.5.17
+   2.5.18
